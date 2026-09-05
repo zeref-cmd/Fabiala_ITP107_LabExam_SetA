@@ -25,11 +25,11 @@ jobs:
           channel: stable
 
       - name: Get dependencies
-        working-directory: fabiala_itp107_labexam_seta/fabiala_portfolio
+        working-directory: Fabiala_ITP107_LabExam_SetA/fabiala_portfolio
         run: flutter pub get
 
       - name: Build Flutter Web
-        working-directory: fabiala_itp107_labexam_seta/fabiala_portfolio
+        working-directory: Fabiala_ITP107_LabExam_SetA/fabiala_portfolio
         run: flutter build web --release --base-href "/${{ github.event.repository.name }}/"
 
       - name: Setup Pages
@@ -38,7 +38,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          path: fabiala_itp107_labexam_seta/fabiala_portfolio/build/web
+          path: Fabiala_ITP107_LabExam_SetA/fabiala_portfolio/build/web
 
   deploy:
     needs: build
